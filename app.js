@@ -32,6 +32,12 @@ console.log(tesla['vehicles']['vehicleThree']);
 
 tesla.print()
 
+function printFriends(array) {
+    array.forEach(friend => {
+        console.log(friend);
+    });
+}
+printFriends(friends);
 
 const starbucks = {
     location: "2300 matties pl",
@@ -47,4 +53,59 @@ const starbucks = {
     }
 }
 starbucks.print()
+
+//standard function
+function findingPrice(menu1,menu2){
+    return menu1 + menu2;
+}
+findingPrice(starbucks.menu.americano, starbucks.menu.vanilaLatte);
+
+
+//function expression
+const multiplyNumbers = function(num1, num2){
+    return num1*num2;
+}
+
+
+// arrow function 
+const subtract = (num1,num2) => {
+    return num1-num2;
+}
+
+//DOM
+const container = document.querySelector('.container');
+console.log(container);
+
+const headerTwo = document.createElement('h2');
+headerTwo.textContent = 'My First JS Review';
+
+
+container.appendChild(headerTwo);
+headerTwo.classList.add('subtitle','header-two');
+//headerTwo.setAttribute('class', 'header-two');
+
+headerTwo.classList.remove('header-two');
+console.log(headerTwo);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

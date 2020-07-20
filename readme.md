@@ -18,3 +18,39 @@
     }
 
 ```
+## Examples of Functions
+
+``` javascript
+//standard expression
+function addNumbers(num1,num2){
+    return num1+num2;
+}
+//function expression
+const multiplyNumbers = function(num1, num2){
+    return num1*num2;
+}
+// arrow function 
+const subtract = (num1,num2) => {
+    return num1-num2;
+
+```
+
+
+## DOM Manipulation
+
+```javascript
+const container = document.querySelector('.container');
+console.log(container);
+
+const headerTwo = document.createElement('h2');
+headerTwo.textContent = 'My First JS Review';
+
+
+container.appendChild(headerTwo);
+headerTwo.classList.add('subtitle','header-two');
+//headerTwo.setAttribute('class', 'header-two');
+
+headerTwo.classList.remove('header-two');
+console.log(headerTwo);
+
+```
