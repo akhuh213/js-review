@@ -54,3 +54,22 @@ headerTwo.classList.remove('header-two');
 console.log(headerTwo);
 
 ```
+### More DOM Manipulation
+
+```javascript
+const list = document.createElement('ul');
+for (let i = 0; i < friends.length; i++ ) {
+    let eachFriend = friends[i];
+
+    const listItem = document.createElement('li');
+    listItem.textContent = eachFriend;
+
+    list.appendChild(listItem);
+}
+//console.log(list);
+headerThree.addEventListener('click', function(){
+    container.appendChild(list);
+});
+```
+
+
