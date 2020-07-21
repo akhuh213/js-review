@@ -123,23 +123,167 @@ headerThree.addEventListener('click', function(){
     container.appendChild(list);
 });
 
+// problem solving
+
+// - [ ] Do I understand what the prompt is asking?
+// - [ ] Am I able to break the problem down?
+// - [ ] What is my strategy for solving the problem?
+// - [ ] Do I understand what my code is doing?
+// - [ ] Am I able to foresee any edge cases?
+// - [ ] Am I able to track the order of the code that is being executed?
+// - [ ] Am I able to track the values of the variables?
+// - [ ] Am I able to walk through my code line by line with an example?
+// - [ ] Do I have a working solution?
+
+//fizzBuzz
+    // takes in an array
+    // check each number in the array
+    // // if the number is divisible 5 and 3 === fizzbuzz 
+    // if the number is divisible by 3 === fizz
+    //if the number is divisible by 5 === buzz 
+//return an array
+
+
+    //[3,5,15,20,9,7]
+    //['Fizz', 'Buzz', ...]
+// I need to set up an empty array
+//iterate through the array that going to be passed in
+//check the remainder of each element
+//push the result of each element inside the result array
+//result that result array
+
+function fizzBuzz(array) {
+    let result = [];
+
+    for (let i = 0; i <array.length; i++) {
+        let num = array[i];
+        if (num % 3 === 0 && num % 5 ===0) {
+            result.push('FizzBuzz')
+        }else if (num % 3 === 0) {  
+            result.push('Fizz')
+        }else if (num % 5 === 0) {
+            result.push('Buzz');
+        }else {
+            result.push(num);
+        }
+    }
+    return result;
+}
+
+console.log(fizzBuzz([3,5,15,20,9,7]));
+
+//inside
+function isInside(array,ele){
+    for (let i=0; i<array.length; i++){
+        if (array[i] === ele){ 
+            return true
+        }
+    }
+    return false
+} 
+const array = ['a','b','c']
+console.log(isInside(array,'b'))
 
 
 
+//reverse string 
+function reverseStr(str){
+    var splitReverse = str.split('');
+    var reverseArray = splitReverse.reverse();
+    var joinArray = reverseArray.join("");
+    return joinArray;
+}
+
+console.log(reverseStr('hello'))
+
+
+function luckySeven(max){
+     let result = []
+     for (i=0; i<=max; i++){
+         if(i%7===0){
+            result.push(i)
+         }
+     }
+     return result
+ }
+    console.log(luckySeven(25));
+
+
+function copyMachine(element, num){
+    let result = []
+    const answer = element
+    for (i = 0; i< num; i++){
+        result.push(answer)
+    }
+    return result
+    }
+        
+console.log(copyMachine('A', 3))
+
+
+function everyOtherWord(sentence){
+     let result = [];
+     let splitSentence = sentence.split(' ')
+     for(i = 0; i < splitSentence.length; i += 2){
+         result.push(splitSentence[i])
+     }
+     return result;
+ }
+console.log(everyOtherWord("this is what I do"))
+
+// Write a function `wordYeller(sentence)` that takes in a sentence string as
+// input. It should return the sentence where every word has an exclamation
+// point behind it, except words that already have punctuation. Punctuation
+// marks are ". , ! ? ; :"
+//
+// Example 1
+// let sent = "Stop it now! Please, wont you stop?";
+// let yelledWords = wordYeller(sent);
+// yelledWords === "Stop! it! now! Please, wont! you! stop?"; // => true
+//
+// Example 2
+// let words = "Go to the store and grab the following: milk, bread, run, and cake";
+// wordYeller(words) === "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
+
+
+//split
+//if has it return 
+//if it doesn't put !
+function wordYeller(sentence){
+    splitSen = sentence.split(' ')
+    for(i = 0; i < sentence.length; i++){
+        if (splitSen[i] === "!"||"."||","||"?"||"!"||";"||":"){
+            return splitSen[i]
+        }else {
+            return splitSen[i] + "!" 
+        }
+    }
+}
+console.log(wordYeller("Wow! This is amazing!"))
+
+
+// Write a function `arraySubstring(words, str)` that takes in an array of
+// strings and a string as arguments and returns an array where each element is
+// replaced with true if the string is a substring of the element and false if
+// it is not.
+//
+// Examples:
+//
+// arraySubstring(["hello", "history", "helix", "hellos"],"hel")
+// => [true, false, true, true]
+// arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre")
+// => [true, false, false, true]
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Write a function evenCaps(sentence) that takes in a sentence as an
+// argument and returns the same string with each even index being
+// capitalized. Index 0 counts as even.
+//
+// Examples:
+//
+// evenCaps("Tom got a small piece of pie")
+// => "ToM GoT A SmAlL PiEcE Of pIe"
+// evenCaps("the book is in front of the table")
+// => "ThE BoOk iS In fRoNt oF ThE TaBlE"
 
