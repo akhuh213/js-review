@@ -246,20 +246,19 @@ console.log(everyOtherWord("this is what I do"))
 // wordYeller(words) === "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
 
 
-//split
-//if has it return 
-//if it doesn't put !
+
 function wordYeller(sentence){
     splitSen = sentence.split(' ')
     for(i = 0; i < sentence.length; i++){
         if (splitSen[i] === "!"||"."||","||"?"||"!"||";"||":"){
-            return splitSen[i]
+            return splitSen[i] 
         }else {
+            console.log(splitSen[i]);
             return splitSen[i] + "!" 
         }
     }
 }
-console.log(wordYeller("Wow! This is amazing!"))
+console.log (wordYeller("Wow! This is amazing!"))
 
 
 // Write a function `arraySubstring(words, str)` that takes in an array of
@@ -274,7 +273,18 @@ console.log(wordYeller("Wow! This is amazing!"))
 // arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre")
 // => [true, false, false, true]
 
-
+function arraySubstring(words, str){
+    let result = []
+    for (i = 0; i <words.length; i++){
+        if (words[i] == str){
+        result.push(true);
+        }else{
+        result.push(false);
+    }
+    }
+    return result
+}
+console.log(arraySubstring(['love','loop','lep'],'lo'));
 
 // Write a function evenCaps(sentence) that takes in a sentence as an
 // argument and returns the same string with each even index being
@@ -286,4 +296,13 @@ console.log(wordYeller("Wow! This is amazing!"))
 // => "ToM GoT A SmAlL PiEcE Of pIe"
 // evenCaps("the book is in front of the table")
 // => "ThE BoOk iS In fRoNt oF ThE TaBlE"
+
+function evenCaps(sentence){
+    let splitArr = sentence.split() 
+    for(i=0; i<=splitArr.length; i+=2){
+        return splitArr[i].toUpperCase()
+        
+    } console.log (splitArr[i]);
+} 
+console.log(evenCaps('This is lovely'))
 
