@@ -196,7 +196,7 @@ function reverseStr(str){
 
 console.log(reverseStr('hello'))
 
-
+// luckyseven 
 function luckySeven(max){
      let result = []
      for (i=0; i<=max; i++){
@@ -205,20 +205,19 @@ function luckySeven(max){
          }
      }
      return result
- }
+}
     console.log(luckySeven(25));
 
 
 function copyMachine(element, num){
     let result = []
-    const answer = element
     for (i = 0; i< num; i++){
-        result.push(answer)
+        result.push(element)
     }
     return result
     }
         
-console.log(copyMachine('A', 3))
+console.log(copyMachine('Apple', 3))
 
 
 function everyOtherWord(sentence){
@@ -229,7 +228,7 @@ function everyOtherWord(sentence){
      }
      return result;
  }
-console.log(everyOtherWord("this is what I do"))
+console.log(everyOtherWord("This is what I do"))
 
 // Write a function `wordYeller(sentence)` that takes in a sentence string as
 // input. It should return the sentence where every word has an exclamation
@@ -248,15 +247,19 @@ console.log(everyOtherWord("this is what I do"))
 
 
 function wordYeller(sentence){
-    splitSen = sentence.split(' ')
-    for(i = 0; i < sentence.length; i++){
-        if (splitSen[i] === "!"||"."||","||"?"||"!"||";"||":"){
-            return splitSen[i] 
+    let splitSen = sentence.split(' ')
+    let emptyArray =[]
+    for(i = 0; i < splitSen.length; i++){
+        var word = splitSen[i]
+        var lastLetter = word[word.length - 1]
+        if ((lastLetter === "!")||(lastLetter === ".")) {
+            emptyArray.push(word)
         }else {
-            console.log(splitSen[i]);
-            return splitSen[i] + "!" 
+            emptyArray.push(word + "!") 
         }
     }
+    let finalString = emptyArray.join(' ');
+    return finalString
 }
 console.log (wordYeller("Wow! This is amazing!"))
 
@@ -276,7 +279,8 @@ console.log (wordYeller("Wow! This is amazing!"))
 function arraySubstring(words, str){
     let result = []
     for (i = 0; i <words.length; i++){
-        if (words[i] == str){
+        var firstletters = words[str.length]
+        if (firstletters == str){
         result.push(true);
         }else{
         result.push(false);
@@ -297,12 +301,13 @@ console.log(arraySubstring(['love','loop','lep'],'lo'));
 // evenCaps("the book is in front of the table")
 // => "ThE BoOk iS In fRoNt oF ThE TaBlE"
 
-function evenCaps(sentence){
-    let splitArr = sentence.split() 
-    for(i=0; i<=splitArr.length; i+=2){
-        return splitArr[i].toUpperCase()
-        
-    } console.log (splitArr[i]);
-} 
-console.log(evenCaps('This is lovely'))
+// function evenCaps(sentence){
+//     let splitArr = sentence.split('') 
+//     for(i=0; i<=splitArr.length; i+=2){
+//         let upperArr= splitArr[i].toUpperCase()
+//         console.log(upperArr)
+//         let joinArray = upperArr.join("")  
+//     } return joinArray
+// } 
+// console.log(evenCaps('This is lovely'))
 
